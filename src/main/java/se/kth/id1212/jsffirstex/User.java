@@ -27,15 +27,24 @@ import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
+/**
+ * Stores a user's name.
+ */
 @Named(value = "user")
 @SessionScoped
 public class User implements Serializable {
     private String name;
 
+    /**
+     * Returns the user's name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the user's name.
+     */
     public void setName(String name) {
         this.name = name;
     }
